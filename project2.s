@@ -83,3 +83,9 @@ Length_Counter:
    li $t5, -1
 
    add $a0, $t7, $zero
+   
+   Loop:
+   lb $t3, 0($a0)
+   or $t2, $t3, $t5
+   beq $t2, $zero, Empty_string_error
+   beq $t3, $zero, stringDone
