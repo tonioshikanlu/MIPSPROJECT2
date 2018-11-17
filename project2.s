@@ -126,4 +126,9 @@ lengthError:
    syscall
 
    j exit    
+ #This will check if the string is valid for characters exceeding base-35 representation.
+
+string_checker:
+
+   move $a0, $t7 # This will move the user input address from t7 to a0.
 
