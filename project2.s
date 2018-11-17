@@ -309,3 +309,9 @@ ShowSum:
    move $a0, $t8
 
    syscall
+exit:
+
+   li $v0,10     
+
+   syscall       
+# Ends the program.
