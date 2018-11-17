@@ -166,7 +166,7 @@ string_checkerLoop:
    slti $t4, $t0, 97       #Check if character is less than 97 which is a 
    bne $t4, $zero, InvalidBase 
 
-   slti $t4, $t0, 121      #Check if character is less than 121 -> y (valid input)
+   slti $t4, $t0, 121      #Check if character is less than 121 which is y 
 
    bne $t4, $zero, Increment_character
 
@@ -179,3 +179,14 @@ Increment_character:
    addi $a0, $a0, 1
 
    j string_checkerLoop
+     #Return error message indicating invalid base-35 number
+
+InvalidBase:
+
+   li $v0, 4
+
+   la $a0, invalidSpaces
+
+   syscall
+
+   j exit
