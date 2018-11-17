@@ -20,3 +20,9 @@ initial_space_deletion:
 
    move $t7, $a0  # Stores characters in t7 register if they are not spaces.
    j delete_after_spaces #Jumps to conditional.
+
+initial_char_deletion:
+
+   addi $a0, $a0, 1 #This increments the counter.
+
+   j initial_space_deletion #Jumps to conditional.
