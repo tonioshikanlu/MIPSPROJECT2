@@ -50,4 +50,8 @@ space_loop_removal:
    beq $t4, $zero, terminate_space_loop  # This will exit the loop to length of the string check, if string has been terminated.
 
    addi $t4, $t4, -10		# Continues the code.
-   
+   beqz $t4, terminate_space_loop        # This will exit the loop if an exitline character has been reached.
+
+   addi $t4, $t4, -22
+
+   bnez $t4, last_index_change # This will update last charcter not a space.
