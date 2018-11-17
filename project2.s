@@ -55,3 +55,8 @@ space_loop_removal:
    addi $t4, $t4, -22
 
    bnez $t4, last_index_change # This will update last charcter not a space.
+space_loop_removal_increment:
+
+   addi $t8, $t8, 1              #This will Increment the character's current index .
+
+   j space_loop_removal		# Jumps to space_loop_removal after code is run.
