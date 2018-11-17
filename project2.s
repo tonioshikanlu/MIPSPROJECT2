@@ -199,3 +199,12 @@ baseConverter:
    li $t8, 0   		
 
    add $s0, $s0, $t5
+   addi $s0, $s0, -1  
+
+   li $s5, 3
+
+   li $s4, 2
+
+   li $s6, 1
+
+   li $s3, 0
