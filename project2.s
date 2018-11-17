@@ -173,3 +173,4 @@ string_checkerLoop:
    bgt $t0, 121, InvalidBase 
 
    li $t8, 10              #Check is character is the newline character
+   beq $t0, $t8, baseConverter     
