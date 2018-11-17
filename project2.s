@@ -302,3 +302,10 @@ exp_zero: # Raises the base to power of zero
    mflo $s7
 
    add $t8, $t8, $s7
+ShowSum:
+
+   li $v0, 1
+
+   move $a0, $t8
+
+   syscall
