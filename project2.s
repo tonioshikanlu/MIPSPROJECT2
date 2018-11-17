@@ -242,3 +242,12 @@ CapitalLetters: #Check for capital letters.
 lowercaseLetters: # Check for lowercase letters.
 
    addi $s2, $s2, -87
+power_Incrementer: # Increments the powers of the base.
+
+   beq  $s0, $s5, exp_three
+
+   beq $s0, $s4, exp_two
+
+   beq $s0, $s6, exp_one
+
+   beq $s0, $s3, exp_zero
