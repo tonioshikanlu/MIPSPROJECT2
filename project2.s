@@ -164,3 +164,12 @@ string_checkerLoop:
    bne $t4, $zero, Increment_character
 
    slti $t4, $t0, 97       #Check if character is less than 97 which is a 
+   bne $t4, $zero, InvalidBase 
+
+   slti $t4, $t0, 121      #Check if character is less than 121 -> y (valid input)
+
+   bne $t4, $zero, Increment_character
+
+   bgt $t0, 121, InvalidBase 
+
+   li $t8, 10              #Check is character is the newline character
