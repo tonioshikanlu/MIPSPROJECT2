@@ -34,3 +34,13 @@ delete_after_spaces:
    li $t2, 0  #This will initialize the index of the last character in the string.
 
    li $t8, 0  #This loads the current index.
+# This deals with the spaces condition.
+space_loop_removal:
+
+   add $t4, $t3, $t8
+
+   addi $t4, $t4, -100
+
+   beqz $t4, terminate_space_loop        # This will terminate if the string buffer exit has been seen.
+
+   add $t4, $t8, $a0        # Obtains current index address.
