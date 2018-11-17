@@ -66,3 +66,15 @@ last_index_change:
    move $t2, $t8 # Moves current index into last index on basis of some considerations.
 
    j space_loop_removal_increment
+terminate_space_loop:
+
+   add $t4, $zero, $a0 
+
+   add $t4, $t4, $t2 
+
+   addi $t4, $t4, 1  
+   
+   # This section of code regained the address of the registers.
+
+   j Length_Counter
+
