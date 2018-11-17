@@ -279,3 +279,12 @@ exp_two: # Raises the base to power of two.
    addi $a0, $a0, 1
 
    j changeString
+exp_one: # Raises the base to power of one.
+
+   li $s1, 35
+
+   mult $s2, $s1
+
+   mflo $s7
+
+   add $t8, $t8, $s7
