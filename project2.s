@@ -239,3 +239,6 @@ CapitalLetters: #Check for capital letters.
    addi $s2, $s2, -55
 
    j power_Incrementer
+lowercaseLetters: # Check for lowercase letters.
+
+   addi $s2, $s2, -87
