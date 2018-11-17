@@ -147,3 +147,11 @@ string_checkerLoop:
    li $t8, 10               #This will check if the character is the newline character.
 
    beq $t0, $t8, baseConverter
+   
+   slti $t4, $t0, 48        #Check if the character is less than 0 (invalid input)
+
+   bne $t4, $zero, InvalidBase
+
+   slti $t4, $t0, 58        #Check if the character is less than 58 -> 9 (valid input)
+
+   bne $t4, $zero, Increment_character
