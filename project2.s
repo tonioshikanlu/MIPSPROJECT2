@@ -103,6 +103,16 @@ stringDone:
    beq $t1, $zero, lengthError
 
    bne $t1, $zero, string_checker
+     #Return error message showing an empty string.
 
+Empty_string_error:
+
+   li $v0, 4
+
+   la $a0, empty_string_error
+
+   syscall
+
+   j exit
      
 
