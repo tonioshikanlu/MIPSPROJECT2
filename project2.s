@@ -148,10 +148,19 @@ string_checkerLoop:
 
    beq $t0, $t8, baseConverter
    
-   slti $t4, $t0, 48        #Check if the character is less than 0 (invalid input)
+   slti $t4, $t0, 48        #Check if the character is less than 0 
 
    bne $t4, $zero, InvalidBase
 
-   slti $t4, $t0, 58        #Check if the character is less than 58 -> 9 (valid input)
+   slti $t4, $t0, 58        #Check if the character is less than 58 which is 9 
 
    bne $t4, $zero, Increment_character
+   slti $t4, $t0, 65        #Check if character is less than 65 which is A 
+
+   bne $t4, $zero, InvalidBase  
+
+   slti $t4, $t0, 90        #Check if character is less than 90 which is Y 
+
+   bne $t4, $zero, Increment_character
+
+   slti $t4, $t0, 97       #Check if character is less than 97 which is a 
