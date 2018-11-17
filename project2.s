@@ -251,3 +251,12 @@ power_Incrementer: # Increments the powers of the base.
    beq $s0, $s6, exp_one
 
    beq $s0, $s3, exp_zero
+exp_three:  # Raises the base to power of three.
+
+   li $s1, 42875
+
+   mult $s2, $s1
+
+   mflo $s7
+
+   add $t8, $t8, $s7
