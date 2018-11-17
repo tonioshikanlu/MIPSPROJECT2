@@ -260,3 +260,8 @@ exp_three:  # Raises the base to power of three.
    mflo $s7
 
    add $t8, $t8, $s7
+   addi $s0, $s0, -1
+
+   addi $a0, $a0, 1
+
+   j changeString
