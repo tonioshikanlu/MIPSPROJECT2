@@ -229,3 +229,8 @@ changeString:
    slti $t4, $s2, 122   #This checks if the character is between (a-y)
 
    bne $t4, $zero, lowercaseLetters
+   numberLine: # Check for digits.
+
+   addi $s2, $s2, -48
+
+   j power_Incrementer
