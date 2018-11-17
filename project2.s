@@ -94,3 +94,15 @@ Length_Counter:
    addi $t5, $t5, 1
 
    j Loop
+   #Execute if exit of string has been reached.
+
+stringDone:
+
+   slti $t1, $t5, 5
+
+   beq $t1, $zero, lengthError
+
+   bne $t1, $zero, string_checker
+
+     
+
