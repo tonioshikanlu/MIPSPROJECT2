@@ -77,4 +77,9 @@ terminate_space_loop:
    # This section of code regained the address of the registers.
 
    j Length_Counter
+   # This will check the Length of the user's Input.
+Length_Counter:
 
+   li $t5, -1
+
+   add $a0, $t7, $zero
