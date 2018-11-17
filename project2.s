@@ -132,3 +132,14 @@ string_checker:
 
    move $a0, $t7 # This will move the user input address from t7 to a0.
 
+string_checkerLoop:
+
+   li $v0, 11
+
+   lb $t0, 0($a0)
+
+   move $t8, $a0
+
+   move $a0, $t0
+
+   move $a0, $t8
