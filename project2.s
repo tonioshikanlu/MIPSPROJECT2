@@ -60,3 +60,9 @@ space_loop_removal_increment:
    addi $t8, $t8, 1              #This will Increment the character's current index .
 
    j space_loop_removal		# Jumps to space_loop_removal after code is run.
+
+last_index_change:
+
+   move $t2, $t8 # Moves current index into last index on basis of some considerations.
+
+   j space_loop_removal_increment
