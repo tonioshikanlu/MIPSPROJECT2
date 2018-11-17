@@ -89,3 +89,8 @@ Length_Counter:
    or $t2, $t3, $t5
    beq $t2, $zero, Empty_string_error
    beq $t3, $zero, stringDone
+   addi $a0, $a0, 1
+
+   addi $t5, $t5, 1
+
+   j Loop
