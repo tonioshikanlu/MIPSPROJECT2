@@ -114,5 +114,16 @@ Empty_string_error:
    syscall
 
    j exit
-     
+      
+  #This will show an error message indicating string with too many characters.
+
+lengthError:
+
+   li $v0, 4
+
+   la $a0, too_long
+
+   syscall
+
+   j exit    
 
