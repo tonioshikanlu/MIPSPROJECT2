@@ -220,3 +220,12 @@ changeString:
    beq $s2, $t3, ShowSum    	
 
    slti $t4, $s2, 58        #This check if the character is between (0-9)
+   bne $t4, $zero, numberLine
+
+   slti $t4, $s2, 90     # This checks if the character is between (A-Y)
+
+   bne $t4, $zero, CapitalLetters
+
+   slti $t4, $s2, 122   #This checks if the character is between (a-y)
+
+   bne $t4, $zero, lowercaseLetters
