@@ -44,3 +44,10 @@ space_loop_removal:
    beqz $t4, terminate_space_loop        # This will terminate if the string buffer exit has been seen.
 
    add $t4, $t8, $a0        # Obtains current index address.
+   
+   lb $t4, 0($t4)           # Loads current index.
+
+   beq $t4, $zero, terminate_space_loop  # This will exit the loop to length of the string check, if string has been terminated.
+
+   addi $t4, $t4, -10		# Continues the code.
+   
