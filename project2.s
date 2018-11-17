@@ -234,3 +234,8 @@ changeString:
    addi $s2, $s2, -48
 
    j power_Incrementer
+CapitalLetters: #Check for capital letters.
+
+   addi $s2, $s2, -55
+
+   j power_Incrementer
