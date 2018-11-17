@@ -190,3 +190,12 @@ InvalidBase:
    syscall
 
    j exit
+baseConverter:
+
+   move $a0, $t7
+
+   li $t3, 10
+
+   li $t8, 0   		
+
+   add $s0, $s0, $t5
