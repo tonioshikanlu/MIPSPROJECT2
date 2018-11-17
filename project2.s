@@ -143,3 +143,7 @@ string_checkerLoop:
    move $a0, $t0
 
    move $a0, $t8
+
+   li $t8, 10               #This will check if the character is the newline character.
+
+   beq $t0, $t8, baseConverter
