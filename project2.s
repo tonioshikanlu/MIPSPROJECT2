@@ -26,3 +26,11 @@ initial_char_deletion:
    addi $a0, $a0, 1 #This increments the counter.
 
    j initial_space_deletion #Jumps to conditional.
+delete_after_spaces:
+
+   la $t3, userInput  # Loads the user input.
+
+   sub $t3, $t7, $t3 # This keeps the offset.
+   li $t2, 0  #This will initialize the index of the last character in the string.
+
+   li $t8, 0  #This loads the current index.
