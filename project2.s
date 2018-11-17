@@ -174,3 +174,8 @@ string_checkerLoop:
 
    li $t8, 10              #Check is character is the newline character
    beq $t0, $t8, baseConverter     
+Increment_character:
+
+   addi $a0, $a0, 1
+
+   j string_checkerLoop
